@@ -1,8 +1,4 @@
-import 'package:chat_anything/ImageGenerator/image_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'chat/chat_screen.dart';
-import 'chat/components/chat_input.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,17 +17,17 @@ class MyApp extends StatelessWidget {
             bottom: const TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.chat_outlined)),
+                Tab(icon: Icon(Icons.image_outlined)),
               ],
             ),
             title: const Text('Tabs Demo'),
           ),
           body: const TabBarView(
             children: [
-              ChatScreen(),
-              InputChat(),
-              ImageScreen(),
+              Center(child: Text('Car')),
+              Center(child: Text('Chat')),
+              Center(child: Text('Image')),
             ],
           ),
         ),
